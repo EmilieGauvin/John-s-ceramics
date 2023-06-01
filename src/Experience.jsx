@@ -8,9 +8,9 @@ export default function Experience() {
 
     return <>
 
-        <color args={['#f8eae3']} attach="background" />
+        <color args={['#f8eae3']} attach='background' />
 
-        <Environment preset="studio" />
+        <Environment preset='studio' />
         <ambientLight />
         <EffectComposer multisampling={4}>
             <DepthOfField
@@ -49,7 +49,7 @@ export default function Experience() {
                 </div>
                 <div className='bottom-text website' >
                     <div className='bar' ></div>
-                    <h4>website by <a href="https://emiliegauvin.com/" target="_blank">emiliegauvin.com</a></h4>
+                    <h4>website by <a href='https://emiliegauvin.com/' target='_blank'>emiliegauvin.com</a></h4>
                 </div>
             </Scroll>
         </ScrollControls>

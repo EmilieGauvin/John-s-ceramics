@@ -3,7 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useRef } from 'react'
 import Object from './Object'
 
-export default function Objects({aspectLimit, texture}) {
+export default function Objects({ aspectLimit, texture }) {
 
     const scroll = useScroll()
     const { height } = useThree((state) => state.viewport)

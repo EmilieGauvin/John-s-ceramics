@@ -32,7 +32,7 @@ export default function Cup(props) {
         const c4 = scroll.curve(4 / 5, 1 / 5)
         const v5 = scroll.visible(9 / 10, 1 / 10)
         const r5 = scroll.range(9 / 10 + 3 / 40, 1 / 40)
-        
+
         cup.current.position.x = camera.aspect > props.aspectLimit ?
             - width / 6 * c3 + (width / 4) * r7
             : - width / 6 * c3
@@ -66,13 +66,12 @@ export default function Cup(props) {
             coffee.current.scale.z = coffee.current.scale.x
         }
 
-        if (v5) 
-        {
+        if (v5) {
             setShadowOpacity(r5)
             cupShadow.current.position.x = cup.current.position.x
             camera.aspect > props.aspectLimit ?
-            cupShadow.current.position.z = cup.current.position.z
-            : cupShadow.current.position.y = cup.current.position.y
+                cupShadow.current.position.z = cup.current.position.z
+                : cupShadow.current.position.y = cup.current.position.y
         }
     })
 
@@ -95,10 +94,10 @@ export default function Cup(props) {
         <Coffee ref={coffee} coffeeVisible={coffeeVisible} />
 
         <CupShadow
-        scale = {camera.aspect > props.aspectLimit ? 1.6 : 0.9}
+            scale={camera.aspect > props.aspectLimit ? 1.6 : 0.9}
             ref={cupShadow}
             visible={shadowOpacity === 0 ? false : true}
-            shadowOpacity={shadowOpacity*0.85}
+            shadowOpacity={shadowOpacity * 0.85}
             rotationX={camera.aspect > props.aspectLimit ? -Math.PI * 0.5 : 0}
             position={
                 camera.aspect > props.aspectLimit ? [0, -6 + 0.1, camera.position.z] : [0, 0.1, 0.7]}

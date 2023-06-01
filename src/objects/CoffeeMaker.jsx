@@ -39,8 +39,8 @@ export default function CoffeeMaker({ aspectLimit, scale }) {
 
     useEffect(() => {
         const pouring = animations.actions.pouring
-        pouring.clampWhenFinished = true;
-        pouring.loop = THREE.LoopOnce;
+        pouring.clampWhenFinished = true
+        pouring.loop = THREE.LoopOnce
         if (coffeeAnimation === true) pouring.reset().play()
     }, [coffeeAnimation])
 
